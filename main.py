@@ -1,6 +1,7 @@
 from product import Product
 from product_manager import ProductManager
 from cart import Cart
+import random
 
 
 manager = ProductManager()
@@ -13,13 +14,12 @@ manager.add_product(product1)
 manager.add_product(product2)
 manager.add_product(product3)
 
-
-
 cart = Cart()
 
-cart.add_product(product1)
-cart.add_product(product2)
-cart.add_product(product3)
+random_products = random.sample(manager.products, 3)
+
+for product in random_products:
+    cart.add_product(product)
 
 print("\nCart:")
 cart.display_cart()
