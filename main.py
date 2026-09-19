@@ -16,3 +16,7 @@ print("Products:")
 manager.display_all_products()
 
 print("\nTotal inventory value:", manager.total_inventory_value())
+
+print("\nAfter removing Mouse:")
+manager.remove_product("Mouse")
+manager.display_all_products()
